@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Omniapp</title>
+    <title>Manual Tradutor</title>
     <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -27,10 +27,10 @@
         </i>
     </header>
     <main class="container">
-        <h2>Manual do Omniapp</h2>
+        <h2>Manual do Tradutor</h2>
         <div class="area-manual">
             <div class="area-slide">
-                <img class="img-slider" id="img-slider" src="../imgs/omniapp-manual/1.png" title="Imagem 1">
+                <img class="img-slider" id="img-slider" src="../imgs/tradutor-manual/1.png" title="Imagem 1">
             </div>
             <div class="btns-controle">
                 <button class="btns-slide btn-voltar" id="btn-voltar" onclick="voltarImg()">Voltar</button>
@@ -54,7 +54,7 @@
         function passarImg(){
             slideImgFoco = slideImgFoco += 1;
             console.log ('Teoricamente esta funcionando')
-            imgFoco.src = `../imgs/omniapp-manual/`+ slideImgFoco + '.png'; 
+            imgFoco.src = `../imgs/tradutor-manual/`+ slideImgFoco + '.png'; 
             imgFoco.title = 'Imagem ' + slideImgFoco;
             if(slideImgFoco === 1){
             document.getElementById('btn-voltar').style.visibility = 'hidden';
@@ -75,7 +75,7 @@
         function voltarImg(){
             slideImgFoco = slideImgFoco -= 1;
             console.log ('Teoricamente esta funcionando')
-            imgFoco.src = `../imgs/omniapp-manual/`+ slideImgFoco + '.png'; 
+            imgFoco.src = `../imgs/tradutor-manual/`+ slideImgFoco + '.png'; 
             imgFoco.title = 'Imagem ' + slideImgFoco;
             if(slideImgFoco === 1){
             document.getElementById('btn-voltar').style.visibility = 'hidden';
