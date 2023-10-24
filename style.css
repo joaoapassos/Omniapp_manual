@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* body::-webkit-scrollbar{
+    position: absolute;
+    right: 0;
+    width: 5px;
+    background-color: white;
+}
+body::-webkit-scrollbar-thumb{
+    right: 0;
+    width: 5px;
+    position: absolute;
+    background-color: black;
+} */
+body{
+    width: 100%; 
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p::selection, a::selection, h2::selection{
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+}
+
+.container{
+    max-width: 1920px;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: 999;
+    /* padding: 50px; */
+}
+header .menu{
+    position: absolute;
+    display: flex;
+    top: -1000px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50%;
+    padding: 30px;
+    background-color: blueviolet;
+    border-top: 2px solid rgb(59, 21, 95);
+    font-size: 20px;
+    /* animation: menu 1s ease-in-out forwards; */
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+@keyframes menu {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+header .menu li{
+    list-style: none;
+    /* width: 60%; */
+    margin-top: 20px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    /* margin: 20px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+header a:hover{
+    color: rgb(206, 206, 206);
+}
+header .icon-menu{
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+.icon-menu svg{
+    height: 40px;
+    transition: all 0.2s ease-in-out;
+    fill: white;
+}
+.icon-menu:hover svg{
+    fill: rgb(206, 206, 206);
+}
+img{
+    height: 70px;
+    margin: 0px 50px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+main h2{
+    font-family: sans-serif;
+    margin: 15px 0;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    font-size: 22px;
+}
+main a{
+    padding: 15px 20px;
+    background-color: blueviolet;
+    color: white;
+    border: 2px solid transparent;
+    width: 60%;
+    border-radius: 10vw;
+    margin: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+main a:hover{
+    background-color: rgb(159, 93, 221);
+    background-color: white;
+    border: 2px solid black;
+    color: blueviolet;
+}
+
+main .area-manual{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 600px) {
+    main{
+        width: 100%;
+    }
+    main .area-manual{
+        height: auto;
+        width: 100%;
+    }
+    main .area-slide{
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main .area-slide img{
+        width: 95% !important;
+    }
+}
+main .area-slide{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    /* background-color: gray; */
+}
+main .area-slide img{
+    height: 100%;
+    width: auto;
+    /* border: 1px solid rgb(206, 206, 206); */
+}
+
+main .btns-controle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+main .btns-controle button{
+    padding: 10px;
+    width: 120px;
+    background-color: blueviolet;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10vw;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main .btns-controle button:hover{
+    background-color: rgb(159, 93, 221);
+    background-color: white;
+    border: 2px solid black;
+    color: blueviolet;
+}
+#btn-voltar{
+    visibility: hidden;
+}
+
+footer{
+    width: 100%;
+    min-height: 100px;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p{
+    margin: 20px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
