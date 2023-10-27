@@ -79,3 +79,9 @@ function menu(){
     }
     
 }  
+
+
+function voltarApp(){
+    var urlScheme = "Omniapp://";
+  window.location.href = urlScheme;
+}
